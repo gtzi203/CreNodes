@@ -1,0 +1,6 @@
+# textdomain: crenodes
+
+Barrier=Barriere
+
+Light (Level @1)=Licht (Level @1)
+Light Switcher@1[Rightclick] to increase light level@2[Leftclick] to decrease light level@3=Licht Switcher@1[Rechtsklick] um Lichtlevel zu erhöhen@2[Linksklick] um Lichtlevel zu verringern@3
