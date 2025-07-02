@@ -59,4 +59,4 @@ Special thanks to ChatGBT for helping me with (mostly) good ideas and bug-fixing
 
 Support:
 
-Report bugs or request features by writing me an E-Mail: <Lasse.Koehne@t-online.de>.
+Report bugs or request features by writing me an E-Mail: <Lasse.Koehne@t-online.de> or use the GitHub issue function: https://github.com/gtzi203/CreNodes/issues
