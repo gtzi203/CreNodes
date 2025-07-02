@@ -21,7 +21,7 @@ Installation:
 
 2. Place the CreNodes folder into your mods folder.
 
-3. Enable the mod in your world’s world.mt or via the in-game mod manager.
+3. Enable the mod via the in-game mod manager.
 
 
 Dependencies:
