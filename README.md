@@ -54,7 +54,7 @@ Credits:
 
 Author: gtzi203 (Lasse Köhne)
 
-Special thanks to ChatGBT for helping me with (mostly) good ideas and bug-fixing.
+Special thanks to ChatGPT for helping me with (mostly) good ideas and bug-fixing.
 
 
 Support:
