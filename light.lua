@@ -60,7 +60,7 @@ for level = 1, 15, 1 do
                     if itemstack:get_name() == "crenodes:light_"..level then
                         minetest.add_particlespawner({
                             amount = 1,
-                            time = 0.1,
+                            time = 0.01,
                             minpos = pos,
                             maxpos = pos,
                             minsize = 10,
@@ -69,8 +69,8 @@ for level = 1, 15, 1 do
                             maxvel = {x = 0, y = 0, z = 0},
                             minacc = {x = 0, y = 0, z = 0},
                             maxacc = {x = 0, y = 0, z = 0},
-                            minexptime = light_particle_update_time + 0.1,
-                            maxexptime = light_particle_update_time + 0.1,
+                            minexptime = light_particle_update_time + 0.12,
+                            maxexptime = light_particle_update_time + 0.12,
                             texture = "crenodes_light_"..level..".png",
                             collisiondetection = false,
                             playername = player:get_player_name()
@@ -78,7 +78,7 @@ for level = 1, 15, 1 do
                     elseif itemstack:get_name() == "crenodes:light_switcher" then
                         minetest.add_particlespawner({
                             amount = 1,
-                            time = 0.1,
+                            time = 0.01,
                             minpos = pos,
                             maxpos = pos,
                             minsize = 10,
@@ -87,8 +87,8 @@ for level = 1, 15, 1 do
                             maxvel = {x = 0, y = 0, z = 0},
                             minacc = {x = 0, y = 0, z = 0},
                             maxacc = {x = 0, y = 0, z = 0},
-                            minexptime = light_particle_update_time + 0.1,
-                            maxexptime = light_particle_update_time + 0.1,
+                            minexptime = light_particle_update_time + 0.12,
+                            maxexptime = light_particle_update_time + 0.12,
                             texture = "crenodes_light_level_"..level..".png",
                             collisiondetection = false,
                             playername = player:get_player_name()
