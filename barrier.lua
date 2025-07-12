@@ -3,7 +3,7 @@
 
 local S = minetest.get_translator(minetest.get_current_modname())
 local barrier_particles = minetest.settings:get_bool("crenodes.barrier_particles") ~= false
-local barrier_particle_update_time = minetest.settings:get("crenodes.barrier_particle_update_time") or 2
+local barrier_particle_update_time = minetest.settings:get("crenodes.barrier_particle_update_time") or 0.1
 local barrier_crating_recipe = minetest.settings:get_bool("crenodes.barrier_crating_recipe") or false
 
 minetest.register_lbm({

@@ -3,7 +3,7 @@
 
 local S = minetest.get_translator(minetest.get_current_modname())
 local light_particles = minetest.settings:get_bool("crenodes.light_particles") ~= false
-local light_particle_update_time = minetest.settings:get("crenodes.light_particle_update_time") or 2
+local light_particle_update_time = minetest.settings:get("crenodes.light_particle_update_time") or 0.1
 local show_all_light_variants = minetest.settings:get_bool("crenodes.show_all_light_variants") ~= false
 local light_crating_recipes = minetest.settings:get_bool("crenodes.light_crating_recipes") or false
 if show_all_light_variants then
