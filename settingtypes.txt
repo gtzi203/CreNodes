@@ -7,7 +7,7 @@
 crenodes.barrier_particles (Barrier particles) bool true
 
 # Every x seconds a barrier node will check if a Player is holding a barrier node and if this is true it will spawn a particle on its Position.
-crenodes.barrier_particle_update_time (Barrier particle update time) int 2 0
+crenodes.barrier_particle_update_time (Barrier particle update time) float 0.1 0.1
 
 # When true barrier nodes will have a crafting recipe.
 crenodes.barrier_crating_recipe (Barrier Crafting recipe) bool false
@@ -18,7 +18,7 @@ crenodes.barrier_crating_recipe (Barrier Crafting recipe) bool false
 crenodes.light_particles (Light particles) bool true
 
 # Every x seconds a light node will check if a Player is holding a light node and if this is true it will spawn a particle on its Position.
-crenodes.light_particle_update_time (Light particle update time) int 2 0
+crenodes.light_particle_update_time (Light particle update time) float 0.1 0.1
 
 # When true every light state is visible in the Players inventory.
 crenodes.show_all_light_variants (Show all light variants) bool true

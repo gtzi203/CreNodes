@@ -46,7 +46,7 @@ minetest.register_node("crenodes:barrier", {
                 if itemstack:get_name() == "crenodes:barrier" then
                     minetest.add_particlespawner({
                         amount = 1,
-                        time = 0.1,
+                        time = 0.01,
                         minpos = pos,
                         maxpos = pos,
                         minsize = 10,
@@ -55,8 +55,8 @@ minetest.register_node("crenodes:barrier", {
                         maxvel = {x = 0, y = 0, z = 0},
                         minacc = {x = 0, y = 0, z = 0},
                         maxacc = {x = 0, y = 0, z = 0},
-                        minexptime = barrier_particle_update_time + 0.1,
-                        maxexptime = barrier_particle_update_time + 0.1,
+                        minexptime = barrier_particle_update_time + 0.12,
+                        maxexptime = barrier_particle_update_time + 0.12,
                         texture = "crenodes_barrier.png",
                         collisiondetection = false,
                         playername = player:get_player_name()

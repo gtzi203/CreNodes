@@ -1,4 +1,4 @@
-CreNodes  v1.0.0
+CreNodes  v1.0.1
 ----------------
 
 Description:
@@ -17,9 +17,9 @@ Light Switcher, that can increase or decrease the light level of the Light Nodes
 
 Installation:
 
-1. Download or clone the repository: https://github.com/gtzi203/CreNodes.git
+1. Download the mod in-game or on ContentDB
 
-2. Place the CreNodes folder into your mods folder.
+2. Place the "crenodes" folder into your mods folder.
 
 3. Enable the mod via the in-game mod manager.
 
@@ -59,4 +59,4 @@ Special thanks to ChatGPT for helping me with (mostly) good ideas and bug-fixing
 
 Support:
 
-Report bugs or request features by writing me an E-Mail: <Lasse.Koehne@t-online.de> or use the GitHub issue function: https://github.com/gtzi203/CreNodes/issues
+Report bugs or request features by using the GitHub issue function: https://github.com/gtzi203/CreNodes/issues
