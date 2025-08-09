@@ -3,4 +3,6 @@
 Barrier=Barrera
 
 Light (Level @1)=Luz (nivel @1)
-Light Switcher@1[Rightclick] to increase light level@2[Leftclick] to decrease light level@3=Conmutador de luz@1[Clic derecho] para aumentar el nivel de luz@2[Clic izquierdo] para disminuir el nivel de luz@3
+
+Light Switcher=Conmutador de luz
+@1[Rightclick] to increase light level@2[Leftclick] to decrease light level=@1[Clic derecho] para aumentar el nivel de luz@2[Clic izquierdo] para disminuir el nivel de luz

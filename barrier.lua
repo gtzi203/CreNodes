@@ -1,10 +1,8 @@
 
 --barrier
 
-local S = minetest.get_translator(minetest.get_current_modname())
 local barrier_particles = minetest.settings:get_bool("crenodes.barrier_particles") ~= false
 local barrier_particle_update_time = minetest.settings:get("crenodes.barrier_particle_update_time") or 0.1
-local barrier_crating_recipe = minetest.settings:get_bool("crenodes.barrier_crating_recipe") or false
 
 minetest.register_lbm({
     name = "crenodes:barrier_particle_timer",
@@ -25,7 +23,7 @@ minetest.register_node("crenodes:barrier", {
     is_ground_content = false,
     sunlight_propagates = true,
     drop = "",
-    sounds = default.node_sound_stone_defaults(),
+    sounds = sound,
     on_construct = function(pos)
         minetest.get_node_timer(pos):start(0)
     end,
@@ -67,14 +65,3 @@ minetest.register_node("crenodes:barrier", {
         end
     end
 })
-
-if barrier_crating_recipe then
-    minetest.register_craft({
-    	output = "crenodes:barrier 4",
-    	recipe = {
-    		{"default:glass", "default:glass", "default:glass"},
-    		{"default:glass", "default:brick", "default:glass"},
-    		{"default:glass", "default:glass", "default:glass"},
-    	}
-    })
-end

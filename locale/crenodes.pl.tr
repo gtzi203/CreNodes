@@ -3,4 +3,6 @@
 Barrier=Bariera
 
 Light (Level @1)=Światło (poziom @1)
-Light Switcher@1[Rightclick] to increase light level@2[Leftclick] to decrease light level@3=Przełącznik światła@1[Prawy klik] aby zwiększyć poziom światła@2[Lewy klik] aby zmniejszyć poziom światła@3
+
+Light Switcher=Przełącznik światła
+@1[Rightclick] to increase light level@2[Leftclick] to decrease light level=@1[Prawy klik] aby zwiększyć poziom światła@2[Lewy klik] aby zmniejszyć poziom światła

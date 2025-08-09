@@ -1,11 +1,9 @@
 
 --light node
 
-local S = minetest.get_translator(minetest.get_current_modname())
 local light_particles = minetest.settings:get_bool("crenodes.light_particles") ~= false
 local light_particle_update_time = minetest.settings:get("crenodes.light_particle_update_time") or 0.1
 local show_all_light_variants = minetest.settings:get_bool("crenodes.show_all_light_variants") ~= false
-local light_crating_recipes = minetest.settings:get_bool("crenodes.light_crating_recipes") or false
 if show_all_light_variants then
     local in_creative_inventory = 0
 else
@@ -37,7 +35,7 @@ for level = 1, 15, 1 do
         light_source = level,
         walkable = false,
         drop = "",
-        sounds = default.node_sound_stone_defaults(),
+        sounds = sound,
         on_construct = function(pos)
             meta = minetest.get_meta(pos)
             meta:set_int("light_level", level)
@@ -98,54 +96,5 @@ for level = 1, 15, 1 do
                 minetest.get_node_timer(pos):start(light_particle_update_time)
             end
         end
-    })
-end
-
-minetest.register_craftitem("crenodes:light_switcher", {
-    description = S("Light Switcher@1[Rightclick] to increase light level@2[Leftclick] to decrease light level@3", "\n", "\n", "\n"),
-    inventory_image = "crenodes_light_switcher.png",
-    on_use = function(itemstack, user, pointed_thing)
-        if pointed_thing and pointed_thing.type == "node" then
-            pos = pointed_thing.under
-            node = minetest.get_node(pos)
-            node_name = node.name
-            meta = minetest.get_meta(pos)
-            level = meta:get_int("light_level")
-            if level > 1 then
-                minetest.set_node(pos, {name = "crenodes:light_"..level - 1})
-            end
-        end
-    end,
-    on_place = function(itemstack, user, pointed_thing)
-        if pointed_thing and pointed_thing.type == "node" then
-            pos = pointed_thing.under
-            node = minetest.get_node(pos)
-            node_name = node.name
-            meta = minetest.get_meta(pos)
-            level = meta:get_int("light_level")
-            if level < 15 and level ~= 0 then
-                minetest.set_node(pos, {name = "crenodes:light_"..level + 1})
-            end
-        end
-    end
-})
-
-if light_crating_recipes then
-    minetest.register_craft({
-    	output = "crenodes:light_15 4",
-    	recipe = {
-    		{"", "default:glass", ""},
-    		{"default:glass", "default:meselamp", "default:glass"},
-    		{"", "default:steelblock", ""},
-    	}
-    })
-
-    minetest.register_craft({
-    	output = "crenodes:light_switcher 1",
-    	recipe = {
-    		{"default:steel_ingot", "default:meselamp", "default:steel_ingot"},
-    		{"default:steel_ingot", "default:copper_ingot", "default:steel_ingot"},
-    		{"default:steel_ingot", "default:meselamp", "default:steel_ingot"},
-    	}
     })
 end

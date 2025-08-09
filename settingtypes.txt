@@ -23,5 +23,10 @@ crenodes.light_particle_update_time (Light particle update time) float 0.1 0.1
 # When true every light state is visible in the Players inventory.
 crenodes.show_all_light_variants (Show all light variants) bool true
 
-# When true light nodes and the light switcher will have crafting recipes.
+# When true light nodes will have crafting recipes.
 crenodes.light_crating_recipes (Light Crafting recipes) bool false
+
+[Light Switcher]
+
+# When true the light switcher will have a crafting recipe.
+crenodes.light_switcher_crating_recipe (Light Switcher Crafting recipe) bool false

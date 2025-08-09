@@ -1,9 +1,9 @@
-CreNodes  v1.0.1
-----------------
+## CreNodes  v1.1.0
 
 Description:
 
 CreNodes adds useful nodes for the creative mode, like barriers or light nodes.
+
 
 
 Features:
@@ -15,31 +15,33 @@ Light Switcher, that can increase or decrease the light level of the Light Nodes
 (all these items are normally creative-mode exclusive, but their crafting recipes can be turned on in the settings)
 
 
+
 Installation:
 
 1. Download the mod in-game or on ContentDB
-
 2. Place the "crenodes" folder into your mods folder.
-
 3. Enable the mod via the in-game mod manager.
+
 
 
 Dependencies:
 
-Minetest engine version 5.10.0 or higher
+Minetest engine version 5.8.0 or higher
 Required mod: default (bundled with Minetest Game)
-Optional mod: unified_inventory (for a better inventory)
+Optional mod: unified\_inventory (for a better inventory)
+
 
 
 Usage:
 
 Barrier: Place it and hold the barrier item in your hand to see the invisble barrier nodes.
 Light: Place it and hold the light item in your hand to see the invisble light nodes.
-       Only the light nodes with the light level of the light item you are holding will show up (for example: you hold the light level "5" light, particles will spawn on light nodes with the light level "5")
+Only the light nodes with the light level of the light item you are holding will show up (for example: you hold the light level "5" light, particles will spawn on light nodes with the light level "5")
 Light Switcher: Hold it in you hand and all light nodes will spawn particles with their light level on it.
-                By rightclicking on a light node the light level of that light node will increase and when you leftclick a light node, its light level will be decreased.
+By rightclicking on a light node the light level of that light node will increase and when you leftclick a light node, its light level will be decreased.
 
 In the Minetest settings you can customize the mod, as you like it.
+
 
 
 License:
@@ -50,13 +52,16 @@ Textures, Models and Sounds: CC-BY-SA
 See LICENSE.txt for more information.
 
 
+
 Credits:
 
-Author: gtzi203 (Lasse Köhne)
+Author: gtzi203
 
 Special thanks to ChatGPT for helping me with (mostly) good ideas and bug-fixing.
+
 
 
 Support:
 
 Report bugs or request features by using the GitHub issue function: https://github.com/gtzi203/CreNodes/issues
+
