@@ -1,11 +1,13 @@
 
 --crafts
 
-local barrier_crating_recipe = minetest.settings:get_bool("crenodes.barrier_crating_recipe") or false
-local light_crating_recipes = minetest.settings:get_bool("crenodes.light_crating_recipes") or false
-local light_switcher_crating_recipe = minetest.settings:get_bool("crenodes.light_switcher_crating_recipe") or false
+local barrier_crafting_recipe = minetest.settings:get_bool("crenodes.barrier_crafting_recipe") or false
+local light_crafting_recipes = minetest.settings:get_bool("crenodes.light_crafting_recipes") or false
+local light_switcher_crafting_recipe = minetest.settings:get_bool("crenodes.light_switcher_crafting_recipe") or false
+local crenodes_breaking_tool_enabled = minetest.settings:get_bool("crenodes.crenodes_breaking_tool_enabled") or false
+local crenodes_breaking_tool_crafting_recipe = minetest.settings:get_bool("crenodes.crenodes_breaking_tool_crafting_recipe") or false
 
-if barrier_crating_recipe then
+if barrier_crafting_recipe then
     minetest.register_craft({
     	output = "crenodes:barrier 4",
     	recipe = {
@@ -16,9 +18,9 @@ if barrier_crating_recipe then
     })
 end
 
-if light_crating_recipes then
+if light_crafting_recipes then
     minetest.register_craft({
-    	output = "crenodes:light_15 4",
+    	output = "crenodes:light_14 4",
     	recipe = {
     		{"", glass, ""},
     		{glass, lamp, glass},
@@ -27,7 +29,7 @@ if light_crating_recipes then
     })
 end
 
-if light_switcher_crating_recipe then
+if light_switcher_crafting_recipe then
     minetest.register_craft({
     	output = "crenodes:light_switcher 1",
     	recipe = {
@@ -36,4 +38,17 @@ if light_switcher_crating_recipe then
     		{steel_ingot, lamp, steel_ingot},
     	}
     })
+end
+
+if crenodes_breaking_tool_enabled then
+  if crenodes_breaking_tool_crafting_recipe then
+      minetest.register_craft({
+        output = "crenodes:crenodes_breaking_tool 1",
+        recipe = {
+          {steel_ingot, lamp, ""},
+          {brick, copper_ingot, ""},
+          {"", "", steel_ingot},
+        }
+      })
+  end
 end

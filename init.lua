@@ -25,7 +25,10 @@ elseif minetest.get_modpath("mcl_core") then
     copper_ingot = "mcl_copper:copper_ingot"
 end
 
+crenodes_breaking_tool_max_uses = 100
+
 dofile(modpath .. "/barrier.lua")
 dofile(modpath .. "/light.lua")
 dofile(modpath .. "/light_switcher.lua")
+dofile(modpath .. "/crenodes_breaking_tool.lua")
 dofile(modpath .. "/crafts.lua")

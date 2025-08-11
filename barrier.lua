@@ -22,10 +22,25 @@ minetest.register_node("crenodes:barrier", {
     drawtype = "airlike",
     is_ground_content = false,
     sunlight_propagates = true,
-    drop = "",
+    drop = "crenodes:barrier",
     sounds = sound,
     on_construct = function(pos)
         minetest.get_node_timer(pos):start(0)
+    end,
+    on_dig = function(pos, node, digger)
+      minetest.node_dig(pos, node, digger)
+      local player_name = digger:get_player_name()
+      if not minetest.is_creative_enabled(player_name) then
+        local wield_item = digger:get_wielded_item()
+        local tool_wear = math.floor(65535 / crenodes_breaking_tool_max_uses)
+        if wield_item:get_name() == "crenodes:crenodes_breaking_tool" then
+          wield_item:add_wear(tool_wear)
+          digger:set_wielded_item(wield_item)
+          if wield_item:get_wear() == 0 then
+            minetest.sound_play("default_tool_breaks", {to_player = player_name})
+          end
+        end
+      end
     end,
     on_destruct = function(pos)
         minetest.get_node_timer(pos):stop()
@@ -34,14 +49,15 @@ minetest.register_node("crenodes:barrier", {
         return {}
     end,
     can_dig = function(pos, player)
-        player_name = player:get_player_name()
-        return minetest.is_creative_enabled(player_name)
+        local player_name = player:get_player_name()
+        local wield_item = player:get_wielded_item()
+        return minetest.is_creative_enabled(player_name) or wield_item:get_name() == "crenodes:crenodes_breaking_tool"
     end,
     on_timer = function(pos, elapsed)
         if barrier_particles then
             for _, player in ipairs(minetest.get_connected_players()) do
-                itemstack = player:get_wielded_item()
-                if itemstack:get_name() == "crenodes:barrier" then
+                local itemstack = player:get_wielded_item()
+                if itemstack:get_name() == "crenodes:barrier" or itemstack:get_name() == "crenodes:crenodes_breaking_tool" then
                     minetest.add_particlespawner({
                         amount = 1,
                         time = 0.01,

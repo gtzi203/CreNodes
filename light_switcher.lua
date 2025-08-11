@@ -24,7 +24,7 @@ minetest.register_craftitem("crenodes:light_switcher", {
             node_name = node.name
             meta = minetest.get_meta(pos)
             level = meta:get_int("light_level")
-            if level < 15 and level ~= 0 then
+            if level < 14 and level ~= 0 then
                 minetest.set_node(pos, {name = "crenodes:light_"..level + 1})
             end
         end

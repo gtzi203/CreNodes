@@ -1,4 +1,4 @@
-## CreNodes  v1.1.0
+## CreNodes  v1.2.0
 
 Description:
 
@@ -13,6 +13,8 @@ Barrier Node, which acts like a invisible, unbreakable wall.
 Light Switcher, that can increase or decrease the light level of the Light Nodes by clicking on them.
 
 (all these items are normally creative-mode exclusive, but their crafting recipes can be turned on in the settings)
+
+CreNodes Breaking Tool, that allowes Survival mode Player to break CreNodes nodes.
 
 
 

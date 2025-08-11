@@ -6,3 +6,6 @@ Light (Level @1)=Lumière (niveau @1)
 
 Light Switcher=Commutateur de lumière
 @1[Rightclick] to increase light level@2[Leftclick] to decrease light level=@1[Clic droit] pour augmenter le niveau de lumière@2[Clic gauche] pour diminuer le niveau de lumière
+
+CreNodes Breaking Tool=Outil de destruction des nœuds CreNodes
+@1This tool can be used to break CreNodes nodes in survival mode.=@1Cet outil peut être utilisé pour casser les nœuds CreNodes en mode survie.
